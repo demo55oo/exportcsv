@@ -46,7 +46,7 @@ const createTableFromData = () => {
 };
 
 const getData = async () => {
-  const jsonUrl = 'https://jsonplaceholder.typicode.com/todos';
+  const jsonUrl = 'https://mobile.fmcsa.dot.gov/qc/services/carriers/name/greyhound?webKey=f9d9a84990f7f4a5b72ebba8ccdb7bb861a44eff';
   const res = await fetch(jsonUrl);
   const jsonData = await res.json();
 
