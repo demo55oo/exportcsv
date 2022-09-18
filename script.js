@@ -46,21 +46,13 @@ const createTableFromData = () => {
 };
 
 const getData = async () => {
-  const jsonUrl = 'https://mobile.fmcsa.dot.gov/qc/services/carriers/name/greyhound?webKey=f9d9a84990f7f4a5b72ebba8ccdb7bb861a44eff';
+  const jsonUrl ='https://mobile.fmcsa.dot.gov/qc/services/carriers/name/greyhound?webKey=f9d9a84990f7f4a5b72ebba8ccdb7bb861a44eff';
   const res = await fetch(jsonUrl);
   const jsonData = await res.json();
-    console.log(res)
-  if (jsonData) {
-    const data = jsonData.map((row) => ({
-      id: row.id,
-      userId: row.userId,
-      title: row.title,
-      completed: row.completed,
-    }));
-
+  const data =jsonData
+   console.log(res)
     return data;
-  }
-};
+  };
 
 const exportToCSV = () => {
   getData().then((data) => {
